@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dbc603682f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo1.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi,I'm <span>AKHIL REDDY</span><br> From India</h1>
+        </div>
+    </div>
+</div>
+<!------------------about------*/ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/image-removebg-preview.jpg">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>I am an enthusiastic engineering student with a strong drive to excel, equipped with excellent problem-solving and analytical abilities. I possess a positive and proactive attitude, and I am eager to take on a stimulating work opportunity to further develop my skill set,
+                    
+                    My communication and presentation skills are effective and enable me to engage with others proficiently.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <P class="tab-links" onclick="opentab('projects')">Projects</P>
+                        <p class="tab-links" onclick="opentab('intenships')">Intenships</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Coding Languages</span><br>JAVA,PYTHON,C</li>
+                            <li><span>Scripting Languages</span><br>JAVA SCRIPT,SQL</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>UDEMY</span><br>PYTHON,C,CORE JAVA</li>
+                            <li><span>COURSERA</span><br>HTML,CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>BUS TRACKING APPLICATION</span><br><p>
+                                A bus tracking app helps users locate and track buses in real-time. It provides information on bus routes, arrival times, and delays. Users can plan ther journeys more efficiently using thes app
+                            </p></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="intenships">
+                        <ul>
+                            <li><span>Data Visualization Intern | [IBM SkillsBuild] | 2023
+                            </span><br><p>
+                                Developed impactful Tableau dashboards, simplifying
+
+                                complex sets for intuitive comprehension data Utilized Python and Excel for in-depth data analysis,
+
+                                extracting actionable insights Collaborated cross-functionally to translate data
+
+                                requirements into visually compelling representations enhancing decision-making processes
+                            </p></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>VIDYA JYOTHI INSTITUTE OF TECHNOLOGY (BTECH/ECE/AI-ML) <br>CGPA: 8.14/10</li>
+                            <li><span>2019-2021</span><br>VIVEKANANDA JR.COLLEGE (INTERMEDIATE/MPC) <br>MARKS=984/1000</li>
+                            <li><span>2019</span><br>SRI SAI CHAITANYA HIGH SCHOOL (SCHOOLING) <br>GPA: 9.7/10</li>
+                            
+                        </ul>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------services------------------- --> -->
+<div id="services">
+    <div class="container">
+        <h2 class="sub-title">My Services</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Web design is the process of creating visually appealing and user-friendly websites by combining layout, content, graphics, and interactive elements.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>UI/UX design focuses on enhancing user satisfaction by improving the usability, accessibility, and interaction of digital products through thoughtful interface design and user experience strategies.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>App design creates user-friendly and visually appealing mobile applications with intuitive navigation and functionality.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
